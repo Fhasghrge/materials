@@ -3,6 +3,7 @@ const bodyParser = require('koa-bodyparser')();
 const staticCache = require('koa-static-cache');
 const path = require('path');
 const logger = require('koa-logger')
+require('dotenv').config();
 
 const router = require('./routers')
 

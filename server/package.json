@@ -11,11 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.0.0",
+    "dotenv": "^16.0.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^10.1.1",
-    "koa-static-cache": "^5.1.4"
+    "koa-static-cache": "^5.1.4",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.0"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
