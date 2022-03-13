@@ -35,10 +35,10 @@ function ParaTran() {
             className="bg-white text-gray-700 font-medium py-1 px-4 
                       border border-gray-400 rounded-lg tracking-wide
                       hover:bg-gray-100 mr-0 block"
-            value='搜索' />
+            value='提交' />
         </form>
       </div>
-      <div className="results p-5 w-full">
+      <div className="results p-5 w-ful overflow-scrolll">
         <p className='text-blue-500 font-bold text-lg mb-3'>搜索结果：</p>
         {
           results.length ?

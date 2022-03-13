@@ -1,6 +1,8 @@
 const Router = require('koa-router');
-const { generatorAvator } = require('../util')
 const moment = require('moment');
+const fs = require('fs')
+const path = require('path');
+const { generatorAvator } = require('../util')
 const getDB = require('../sql');
 const router = new Router({prefix: '/api'})
 
@@ -43,7 +45,7 @@ router.get('/getComments', async (ctx) => {
 
 router.get('/search/:key', async (ctx) => {
   const key = ctx.params.key;
-  if(key.length < 5) {
+  if(key.length < 2) {
     ctx.response.status = 400;
     ctx.body = 'error request'
     return;
@@ -65,5 +67,18 @@ router.get('/search/:key', async (ctx) => {
   }
 })
 
+
+router.get('/static/pdf/:dirname/:filename', async (ctx) => {
+  const { dirname, filename } = ctx.params;
+  try {
+    const target = fs.createReadStream(path.join(__dirname,'../static/pdf', dirname, filename))
+    ctx.set('Content-disposition', 'attachment; filename=' + filename);
+    ctx.set('Content-type', 'application/pdf')
+    ctx.body = target;
+  } catch (error) {
+    ctx.status = 500;
+    ctx.body = error.message || 'unknow error';
+  }
+})
 
 module.exports = router;
