@@ -15,6 +15,6 @@ app.use(staticCache(path.resolve(__dirname, './public')))
 
 app.use(router.routes());
 
-app.listen(4000, () => {
+app.listen(80, () => {
   console.log('server is listening');
 })
