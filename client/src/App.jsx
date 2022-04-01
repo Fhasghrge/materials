@@ -7,12 +7,12 @@ import Comments from './pages/comments'
 
 function App() {
   return (
-    <div className='bg-slate-200 min-h-screen'>
-      <header className='w-screen text-blue-400 bg-indigo-100 p-1 fixed h-16 shadow-sm'>
-        <div>
-          <div>中国知识产权法律法规汉英平行语料库</div>
-          <div>Parallel Corpus of Chinese Intellectual Property Laws and Regulations</div>
-        </div>
+    <div className='bg-slate-200 min-h-screen flex flex-col'>
+      <div className='flex flex-col justify-center items-center py-4'>
+        <div className='text-2xl'>中国知识产权法律法规汉英平行语料库</div>
+        <div className='text-gray-600'>Parallel Corpus of Chinese Intellectual Property Laws and Regulations</div>
+      </div>
+      <header className='w-screen text-blue-400 bg-indigo-100 p-1 h-16 shadow-sm'>
         <div className='flex justify-center space-x-20 text-2xl pt-4'>
           <div><Link to='/'>汉英平行</Link></div>
           <div><Link to='/translate'>翻译显化</Link></div>
@@ -40,10 +40,10 @@ function App() {
           <Route path='/translate' element={<Show />} />
           <Route path='/comment' element={<Comments />} />
           <Route path='/docs' element={<Docs />} />
-          <Route path='*'element ={<Navigate replace to="/" />} />
+          <Route path='*' element={<Navigate replace to="/" />} />
         </Routes>
       </main>
-      <footer>为您提供丰富的知识产权语料检索 电子科技大学</footer>
+      <footer className='mt-auto text-center mb-2 py-6'>为您提供丰富的知识产权语料检索</footer>
     </div>
   )
 }

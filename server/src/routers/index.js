@@ -72,7 +72,7 @@ router.get('/static/pdf/:dirname/:filename', async (ctx) => {
   const { dirname, filename } = ctx.params;
   try {
     const target = fs.createReadStream(path.join(__dirname,'../static/pdf', dirname, filename))
-    ctx.set('Content-disposition', 'attachment; filename=' + filename);
+    ctx.set('Content-disposition', 'attachment; filename=' + filename.replace(/([a-z])([A-Z])/g, '$1 $2'));
     ctx.set('Content-type', 'application/pdf')
     ctx.body = target;
   } catch (error) {

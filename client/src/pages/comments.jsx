@@ -45,11 +45,11 @@ function Comments() {
   }
   return (
     <div className='p-10'>
-      <div className='flex items-center flex-col space-y-2 w-2/3 m-auto'>
+      <div className='flex items-center flex-col space-y-2 w-full m-auto'>
         {comments?.map(item => <SingleComment key={item.date} {...item} />)}
       </div>
       <div className="flex mx-auto items-center justify-center mt-10 mb-4 w-full">
-        <form className="w-2/5 bg-white rounded-lg p-4 shadow-md"
+        <form className="w-4/5 bg-white rounded-lg p-4 shadow-md"
           onSubmit={(e) => { e.preventDefault(); handleSubmit(e.target) }}
         >
           <div className="flex flex-wrap -mx-3 mb-6">

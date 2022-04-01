@@ -23,7 +23,7 @@ function ParaTran() {
       })
   }
   return (
-    <div className="flex">
+    <div className="flex w-4/5 m-auto">
       <div className="searchite px-10 py-5">
         <form onSubmit={e => { e.preventDefault(); handleSearch(e.target) }}>
           <div>
@@ -54,8 +54,10 @@ function ParaTran() {
               </div>
             ))
             :
-            <div className='text-center h-32 leading-10'><svg t="1648806977067" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2174" width="200" height="200"><path d="M512 85.333333c235.648 0 426.666667 191.018667 426.666667 426.666667s-191.018667 426.666667-426.666667 426.666667S85.333333 747.648 85.333333 512 276.352 85.333333 512 85.333333z m278.058667 193.834667L279.168 790.058667A362.666667 362.666667 0 0 0 790.058667 279.168zM512 149.333333a362.666667 362.666667 0 0 0-278.058667 595.498667L744.832 233.941333A361.216 361.216 0 0 0 512 149.333333z" p-id="2175"></path></svg></div>
-        }
+            <div className='text-center ml-2'>
+              <img className='w-60' src="/img/logo.jpg" alt="" />
+            </div>
+        } 
       </div>
     </div>
   )
@@ -75,7 +77,7 @@ function HightLight({ skey, text }) {
       {slices.map((text, index) => {
         if (index === slices.length - 1) return <span key={index}>{text}</span>
         return <span key={index}>
-          {text}<span className='bg-yellow-400'>{skey}</span>
+          {text}<span className='bg-yellow-400 underline'>{skey}</span>
         </span>
       })}
     </div>

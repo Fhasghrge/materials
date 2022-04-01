@@ -28,7 +28,7 @@ function Show() {
             download='InformationSupplementation.pdf'
           >
             <PDFSvg />
-            InformationSupplementation
+            Information Supplementation
           </a>
           <a
             href="/api/static/pdf/ExplicitationofConceptualMeaning/Polysemy.pdf"
@@ -47,21 +47,21 @@ function Show() {
             download='ForensicExpression.pdf'
           >
             <PDFSvg />
-            ForensicExpression
+            Forensic Expression
           </a>
           <a
-            href="/api/static/pdf/ExplicitationofCulturalInformation/PoliticalCulturewithChineseCharacteristics.pdf"
+            href="/api/static/pdf/ExplicitationofCulturalInformation/PoliticalCultureWithChineseCharacteristics.pdf"
             download='PoliticalCulturewithChineseCharacteristics.pdf'
           >
             <PDFSvg />
-            PoliticalCulturewithChineseCharacteristics
+            Political Culture with Chinese Characteristics
           </a>
           <a
             href="/api/static/pdf/ExplicitationofCulturalInformation/TraditionalCulture.pdf"
             download='TraditionalCulture.pdf'
           >
             <PDFSvg />
-            TraditionalCulture
+            Traditional Culture
           </a>
         </div>
       </div>
